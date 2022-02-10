@@ -1,0 +1,15 @@
+* {
+    box-sizing: content-box;
+}
+
+.bar-container {
+    display: flex;
+}
+
+.bar {
+    height: 10rem;
+    width: 2rem;
+    border: solid .1px rgb(52, 52, 52);
+    border-radius: 2px 2px 0px 0px;
+    background-color: rgb(69, 186, 188);
+}
