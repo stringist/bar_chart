@@ -1,7 +1,7 @@
 "use strict";
 window.addEventListener("load", init);
-let customerArr = [];
-let numberOfCustomers;
+const customerArr = [];
+const queueSize = ;
 
 function init() {
     loop();
@@ -10,10 +10,12 @@ function init() {
 function loop() {
     getNumberOfCustomers();
     setTimeout(loop, 500);
+    // moveBars();
+    // document.querySelector(".bar").classList.add(".moveLeft");
 }
 
 function getNumberOfCustomers() {
-    console.log("get number of customers", customerArr)
+    console.log("get number of customers", customerArr);
     numberOfCustomers = Math.floor(Math.random() * 32);
     modifyArray(numberOfCustomers);
 }
@@ -25,7 +27,8 @@ function displayBars() {
     document.querySelector(".bar-container").appendChild(newBar);
     let barHeight = numberOfCustomers + "rem";
     newBar.style.height = barHeight;
-    if (customerArr.length >= 40) { moveBars(); };
+    document.querySelector(".bar-container>*").classList.add(".moveLeft");
+    // moveBars();
 }
 
 function modifyArray() {
@@ -39,15 +42,16 @@ function modifyArray() {
     displayBars();
 }
 
-function moveBars() {
-    console.log("moveBars"); {
-        customerArr[]
-        document.querySelector(".bar").classList.add("moveLeft");
-        document.querySelector(".bar").classList.remove("moveLeft");
-        console.log(document.querySelector(".bar-container").classList)
-    }
-
-}
+// function moveBars() {
+//     newBar.forEach(classList.add("moveLeft"));
+// }
+// function moveBars() {
+//     console.log("moveBars"); {
+//         document.querySelector(".bar").classList.add("moveLeft");
+//         // document.querySelector(".bar").classList.remove("moveLeft");
+//         console.log(document.querySelector(".bar-container").classList);
+//     }
+// }
 
 // function modifyArray() {
 //     console.log("modify array", customerArr, numberOfCustomers);
