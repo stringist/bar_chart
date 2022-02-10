@@ -1,15 +1,45 @@
 * {
     box-sizing: content-box;
+    overflow: hidden;
 }
 
 .bar-container {
+    /* min-height: 50vw; */
     display: flex;
+    align-items: baseline;
+    gap: .2rem;
+    overflow: hidden;
+    max-width: 100vw;
+    position: relative;
 }
 
 .bar {
-    height: 10rem;
-    width: 2rem;
+    /* height: 10rem; */
+    min-width: 2rem;
     border: solid .1px rgb(52, 52, 52);
     border-radius: 2px 2px 0px 0px;
     background-color: rgb(69, 186, 188);
+    position: relative;
+    right: 0px;
+}
+
+
+/* .moveLeft {
+    transform: translateX(-2rem);
+} */
+
+.moveLeft {
+    animation: moveLeft 1s;
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translatex(0rem);
+    }
+    50% {
+        transform: translateX(-.5rem);
+    }
+    100% {
+        transform: translateX(-2rem);
+    }
 }
