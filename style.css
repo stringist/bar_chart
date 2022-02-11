@@ -32,7 +32,7 @@
 } */
 
 .moveLeft {
-    animation: moveLeft 1s;
+    animation: moveLeft 1s linear;
 }
 
 @keyframes moveLeft {
