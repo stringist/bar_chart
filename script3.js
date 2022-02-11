@@ -19,6 +19,17 @@ function loop() {
     setTimeout(loop, 300);
 }
 
+function modifyArray() {
+    const queueSize = getNumberOfCustomers();
+    console.log("modify array", customerArr, queueSize);
+    if (customerArr.length < 40) {
+        customerArr.unshift(queueSize);
+    } else {
+        customerArr.unshift(queueSize);
+        customerArr.length = 40;
+    }
+    displayBars();
+}
 
 function displayBars() {
     console.log("displayBars");
@@ -38,16 +49,4 @@ function displayBars() {
         container.removeChild(oldBar);
     }
 
-}
-
-function modifyArray() {
-    const queueSize = getNumberOfCustomers();
-    console.log("modify array", customerArr, queueSize);
-    if (customerArr.length < 40) {
-        customerArr.unshift(queueSize);
-    } else {
-        customerArr.unshift(queueSize);
-        customerArr.length = 40;
-    }
-    displayBars();
 }
