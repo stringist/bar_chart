@@ -25,7 +25,7 @@ function displayBars() {
     let newBar = document.createElement("div");
     const container = document.querySelector(".bar-container");
     newBar.classList.add("bar");
-    const barHeight = customerArr[0] + 50 + "%";
+    const barHeight = customerArr[0] + "%";
     newBar.style.height = barHeight;
     document.querySelector(".bar-container").appendChild(newBar);
     // newBar.setAttribute("id", i);

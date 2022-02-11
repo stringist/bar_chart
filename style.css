@@ -4,7 +4,7 @@
 }
 
 .bar-container {
-    border: solid 1px black;
+    /* border: solid 1px black; */
     height: 50vh;
     display: flex;
     margin-top: 5rem;
