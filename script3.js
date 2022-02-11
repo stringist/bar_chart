@@ -2,7 +2,6 @@
 
 const customerArr = [];
 
-
 window.addEventListener("load", init);
 
 function getNumberOfCustomers() {
@@ -17,18 +16,28 @@ function init() {
 function loop() {
     console.log("loop");
     modifyArray();
-    setTimeout(loop, 500);
+    setTimeout(loop, 300);
 }
 
 
 function displayBars() {
     console.log("displayBars");
     let newBar = document.createElement("div");
+    const container = document.querySelector(".bar-container");
     newBar.classList.add("bar");
-    let barHeight = customerArr[0] + "rem";
+    const barHeight = customerArr[0] + 50 + "%";
     newBar.style.height = barHeight;
     document.querySelector(".bar-container").appendChild(newBar);
-    newBar.classList.add("moveLeft");
+    // newBar.setAttribute("id", i);
+    // document.querySelector(".bar-container").removeChild();
+    if (customerArr.length >= 40) {
+        // newBar.classList.add("moveLeft");
+        let oldBar = container.childNodes[0];
+        const allBars = document.querySelector(".bar");
+        document.querySelector(".bar-container>*").classList.add("moveLeft");
+        container.removeChild(oldBar);
+    }
+
 }
 
 function modifyArray() {
